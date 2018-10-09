@@ -152,12 +152,8 @@ Quando viene creata un'istanza di una visualizzazione parziale, le viene associa
 È possibile trasmettere un modello in una visualizzazione parziale. Può trattarsi del modello di visualizzazione della pagina o di un oggetto personalizzato. È possibile trasmettere un modello a `PartialAsync` o a `RenderPartialAsync`:
 
 ```cshtml
-@await Html.PartialAsync("_PartialName", viewModel)
+@await Html.PartialAsync("_PartialName", model)
 ```
-
-È possibile trasmettere un'istanza di `ViewDataDictionary` e un modello di visualizzazione a una visualizzazione parziale:
-
-[!code-cshtml[](partial/sample/PartialViewsSample/Views/Articles/Read.cshtml?name=snippet_PartialAsync)]
 
 Il markup seguente illustra la visualizzazione *Views/Articles/Read.cshtml* contenente due visualizzazioni parziali. La seconda visualizzazione parziale viene trasmessa a un modello e `ViewData` viene trasmesso alla visualizzazione parziale. Usare l'overload del costrutto `ViewDataDictionary` evidenziato per passare un nuovo dizionario `ViewData`mantenendo il dizionario `ViewData` esistente.
 
